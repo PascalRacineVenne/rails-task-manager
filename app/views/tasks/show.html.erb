@@ -3,6 +3,8 @@
 <!-- list of details -->
 <p><%= @task.details %> </p>
 
+<p><%= @task.completed ? 'Task completed' : 'Not yet completed' %></p>
+
 <!-- link to home page of tasks -->
 <%= link_to "home", tasks_path %>
 <%= link_to "delete the task", task_path(@task), method: :delete, data: { confirm: "Are you sure?" }%>
